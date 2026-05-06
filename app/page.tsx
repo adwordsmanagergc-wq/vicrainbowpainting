@@ -11,7 +11,6 @@ import {
   Check,
   ChevronDown,
   Shield,
-  Paintbrush,
   Home,
   Building2,
   Layers,
@@ -132,20 +131,19 @@ const navItems = [
   { label: "Contact", id: "contact" },
 ];
 
-function RainbowLogo() {
+function RainbowLogo({ size = "md" }: { size?: "md" | "lg" }) {
+  const dim = size === "lg" ? "h-16 md:h-20" : "h-12 md:h-14";
   return (
-    <Link href="/" className="flex items-center gap-2" aria-label={business.name}>
-      <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-red-500 via-yellow-400 to-blue-500 text-white shadow">
-        <Paintbrush className="h-5 w-5" />
-      </span>
-      <span className="leading-tight">
-        <span className="block font-display text-lg font-bold rainbow-text">
-          {business.shortName}
-        </span>
-        <span className="block text-[10px] uppercase tracking-widest text-gray-500 font-semibold">
-          Painting · Endeavour Hills
-        </span>
-      </span>
+    <Link href="/" className="flex items-center" aria-label={business.name}>
+      <img
+        src="/images/vic-rainbow-painting-logo.webp"
+        srcSet="/images/vic-rainbow-painting-logo-256.webp 256w, /images/vic-rainbow-painting-logo-512.webp 512w"
+        sizes="(max-width: 768px) 56px, 80px"
+        alt={`${business.name} logo`}
+        width={512}
+        height={512}
+        className={`${dim} w-auto`}
+      />
     </Link>
   );
 }
