@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #2563eb;
+  --brand-dark: #1d4ed8;
+  --ink: #111827;
+}
+
+html { scroll-behavior: smooth; }
+body { color: var(--ink); }
+
+.rainbow-text {
+  background: linear-gradient(90deg, #ef4444, #f97316, #eab308, #22c55e, #06b6d4, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
