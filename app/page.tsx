@@ -797,9 +797,20 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+          <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500 space-y-2">
             <p>
               © {new Date().getFullYear()} {business.name}. All rights reserved.
+            </p>
+            <p>
+              Website created by{" "}
+              <a
+                href="https://metatapdigital.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-300 hover:text-white underline underline-offset-2"
+              >
+                metatapdigital.com
+              </a>
             </p>
           </div>
         </div>
